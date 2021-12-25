@@ -1,4 +1,3 @@
 ﻿  main.cpp
 c:\users\sadpo\documents\пми материалы\научная работа\sde\sde\diffeq.h(140): warning C4018: <: несоответствие типов со знаком и без знака
-c:\users\sadpo\documents\пми материалы\научная работа\sde\sde\main.cpp(14): warning C4101: task: неиспользованная локальная переменная
   SDE.vcxproj -> C:\Users\sadpo\Documents\ПМИ материалы\Научная Работа\SDE\Debug\SDE.exe

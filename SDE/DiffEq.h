@@ -85,8 +85,8 @@ public:
 		arg.push_back(t0);
 		res.push_back(x0);
 		steps.push_back(0.0);
-//		if (!file.is_open())
-//			return res;
+		if (!(file.is_open()))
+			return res;
 		double tn = t0;
 		double xn = x0;
 		int i = 0;		
@@ -118,9 +118,9 @@ public:
 					else
 						xn = Euler(tn, xn, h);
 				}
-//				file << tn << '\t' << xn << std::endl;
 				tn += h;
 				i++;
+				file << tn << '\t' << xn << std::endl;
 				arg.insert(arg.begin() + i, tn);
 				res.insert(res.begin() + i, xn);
 				steps.insert(steps.begin() + i, h);					

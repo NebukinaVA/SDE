@@ -4,14 +4,8 @@
 
 int main()
 {
-	setlocale(LC_ALL, "Russian");
-	//	test example(0.0, 1.0, 0.001, 1000, 1e-5, 2, 1e-3);
-	//	task1 example(0.0, 1.0, 0.001, 200, 1e-5, 2, 1e-3);
-	//	task2 example(0.0, 1.0, 1.0, 2.0, 1.0, 1.0, 0.001, 1000, 1e-5, 10.0, 1e-3);
-	//	example.calculate_w_error();
-	//	std::cout << example;
-		// ------------------------
-	int task, n;
+	setlocale(LC_ALL, "Russian");	
+	int n;
 	double t0, x0, a, h, xmax, prec;
 	double D = 0.5;
 	std::string str;
@@ -42,14 +36,14 @@ int main()
 		bool noise;
 		std::cout << "Производить расчет с учетом шума?\n1 - Да\n0 - Нет\n";
 		std::cin >> noise;
-		if (!method && !noise)
-			str = "Euler.dat";
-		if (!method && noise)
-			str = "EulerScheme.dat";	
-		if (method && !noise)
-			str = "Heun.dat";
+		if (!(method) && !(noise))
+			str = "Euler.txt";
+		if (!(method) && noise)
+			str = "EulerScheme.txt";	
+		if (method && !(noise))
+			str = "Heun.txt";
 		if (method && noise)
-			str = "HeunScheme.dat";
+			str = "HeunScheme.txt";
 		SDE equation(t0, x0, a, h, n, xmax, prec);
 		equation.calculate(method, noise, D, str);
 		std::cout << equation;
